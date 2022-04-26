@@ -1,0 +1,109 @@
+.project_section {
+  width: 100%;
+  padding-top: 80px;
+  background-color: #f3f3f3;
+}
+
+h2 {
+  font-size: 28px;
+  color: #23222B;
+  text-align: center;
+}
+
+.project_wrapper {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project_card {
+  width: 70%;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  display: flex;
+  margin-bottom: 40px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.proj_img {
+  max-width: 300px;
+  width: 250px;
+
+}
+
+.proj_img img {
+  width: 100%;
+
+}
+
+.proj_text {
+  padding: 0px 30px;
+  width: 70%;
+}
+
+.tags {
+  display: flex;
+  list-style-type: none;
+}
+
+.tags li {
+  margin-right: 20px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #23222B;
+}
+
+.proj_intro {
+
+  padding: 20px 0px;
+  text-align: justify;
+}
+
+.go-online_btn {
+  color: #ffffff;
+  border-radius: 5px;
+  background-color: firebrick;
+  padding: 8px;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media screen and (max-width:960px) {
+  .tags {
+    flex-wrap: wrap;
+  }
+
+  .tags li {
+    margin: 5px;
+  }
+
+  .project_card {
+
+    padding: 20px;
+  }
+
+
+}
+
+@media screen and (max-width:414px) {
+  .project_card {
+
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .proj_img {
+    max-width: 100%;
+    width: 100%;
+
+  }
+
+  .proj_text {
+    width: 100%;
+    padding: 5px;
+  }
+}

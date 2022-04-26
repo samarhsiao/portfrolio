@@ -1,0 +1,219 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Fira Sans',
+  sans-serif;
+}
+.navbar_wrapper {
+  width: 100%;
+  position: Fixed;
+  top:0;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+  rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding: 8px;
+  
+
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin-right: 30px;
+}
+
+.logo {
+  width: 30px;
+}
+
+.link a {
+  text-decoration: none;
+  color: #A5A5A5;
+  font-weight:700;
+}
+
+.nav-links li {
+  margin-left: 20px
+}
+
+.nav-links li::after {
+  content: "";
+  width: 10%;
+  display: block;
+  border-bottom: 1px solid transparent;
+  transition: .4s;
+}
+
+.link:hover::after {
+  content: "";
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #23222B;
+}
+.link:hover a{
+  color:#23222B;
+}
+.hamburger-m{
+  display:none;
+}
+
+.top_section{
+  width:100%;
+  height:500px;
+  background-image:  url('../img/coconut_cover.jpg');
+  background-position:50% 35%;
+  background-repeat:no-repeat;
+  background-size:cover;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.text_wrapper{
+  margin-bottom:25px;
+}
+.text_wrapper h2{
+  font-size:80px;
+  margin-bottom:15px;
+}
+.text_wrapper p{
+  font-size:24px;
+}
+
+.btn_wrapper{
+  display:flex;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  bottom:0%;
+  transform:translateY(50%);
+}
+
+.avatar img {
+  width: 100%;
+}
+
+.cardWrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:100px 0;
+}
+
+.flipping-card {
+  width: 320px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+
+
+.flipping-card h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+  margin: 35px auto 20px;
+}
+
+.flipping-card p {
+  font-size: 20px;
+  margin: 0px auto 20px;
+  color: white;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon i {
+  color: white;
+  font-size: 24px;
+
+}
+
+.social-icon .icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: auto 10px;
+  cursor: pointer;
+}
+
+.social-icon .icon:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.icon a {
+  text-decoration: none;
+}
+
+
+.btn {
+  width: 120px;
+  padding: 18px 8px;
+  border-radius: 80px;
+  margin: auto 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.btn a{
+  text-decoration: none;
+}
+
+.resume{
+  background-color: #23222B;
+}
+.resume a{
+  color:white;
+}
+
+.github {
+  background-color:white
+}
+
+.github a {
+  color: #23222B;
+}
+@media screen and (max-width:414px){
+  .nav-links{
+    display:none;
+  }
+  .hamburger-m{
+    display:block;
+    font-size:18px;
+  }
+  .navbar{
+    padding:0px;
+  }
+ .logo {
+   width:28px;
+   margin:5px 0px 5px 5px;
+ }
+ .hamburger-m{
+    margin:5px 5px 0px 5px;
+    color:#A5A5A5;
+ }
+  
+}
