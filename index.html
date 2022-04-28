@@ -10,25 +10,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- animation.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
   <link rel="icon" href="./img/logo.png" />
   <link rel="stylesheet" href="./style/intro.css">
   <link rel="stylesheet" href="./style/project.css">
   <link rel="stylesheet" href="./style/skill.css">
   <link rel="stylesheet" href="./style/contact.css">
-
   <title> Samar's Website</title>
-
-
 </head>
-
 <body>
   <div class="navbar_wrapper">
     <nav class="navbar">
       <img src="./img/logo.png" alt="" class="logo">
-      <ul class="nav-links">
+      <ul class="menu">
         <li class="link"><a href="#home">HOME</a></li>
         <li class="link"><a href="#project">PROJECT</a></li>
         <li class="link"><a href="#skill">SKILL</a></li>
@@ -37,14 +30,23 @@
       <div class="hamburger-m"><i class="fas fa-hamburger"></i></div>
     </nav>
   </div>
+  <div class="navbar-m">
+   <ul class="menu-m">
+     <li class="link-m"><a href="#home">HOME</a></li>
+     <li class="link-m"><a href="#project">PROJECT</a></li>
+     <li class="link-m"><a href="#skill">SKILL</a></li>
+     <li class="link-m"><a href="#contact">CONTACT ME</a></li>
+   </ul>
+  </div>
   <div class="top_section" id="home">
     <div class="text_wrapper">
       <h2>Samar</h2>
       <p>Hi, I am a front-end engineer. Welcome to my portfolio.</p>
     </div>
     <div class="btn_wrapper">
-      <div class="btn resume"><a href="">Resume</a></div>
-      <div class="btn github"><a href="">Github</a></div>
+      <div class="btn resume"><a href="https://www.cakeresume.com/s--Xe4tehN5BCUO11Haz91AyQ--/samar-hsiao"
+          target="_blank">Resume</a></div>
+      <div class="btn github"><a href="https://github.com/samarhsiao" target="_blank">Github</a></div>
 
     </div>
     <div class="avatar">
@@ -66,7 +68,8 @@
               <li>My SQL</li>
             </ul>
             <div class="proj_intro">Wander線上教育平台，提供教師上傳課程影片，學生也能自由選擇喜歡的課程。專案採前後端分離，前端使用React框架串接api，後端環境以Node.js建置。</div>
-            <div class="go-online_btn"><i class="fas fa-code-merge"></i> Github</div>
+            <div class="go-online_btn"><i class="fas fa-code-merge"></i> <a
+                href="https://github.com/joshlin0927/proj_wander" target="_blank">Github</a></div>
           </div> 
         </div>  
 
@@ -81,7 +84,8 @@
             </ul>
             <div class="proj_intro">串接國際匯率open api，仿照銀行網站提供台幣兌換外幣匯率換算服務。專案採前後端分離，前端使用React框架串接api，後端環境以Node.js建置。
             </div>
-             <div class="go-online_btn"><i class="fas fa-code-merge"></i> Github</div>
+             <div class="go-online_btn"><i class="fas fa-code-merge"></i> <a
+                 href="https://github.com/samarhsiao/money-exchange" target="_blank">Github</a></div>
           </div>
         </div>
 
@@ -94,12 +98,13 @@
             </ul>
             <div class="proj_intro">復刻時尚雜誌Tatler官網首頁。採Bootsrap作為CSS/HTML框架。
             </div>
-            <div class="go-online_btn"><i class="fas fa-code-merge"></i> Github</div>
+            <div class="go-online_btn"><i class="fas fa-code-merge"></i> <a
+                href=" https://samarhsiao.github.io/Tatler_practice/" target="_blank">Github</a></div>
           </div>
         </div>
 
         <div class="project_card">
-          <div class="proj_img"><img src="./img/fullPage.png" alt=""></div>
+          <div class="proj_img"><img src="./img/fullPage.jpg" alt=""></div>
           <div class="proj_text">
             <ul class="tags">
               <li>HTML/CSS</li>
@@ -109,7 +114,9 @@
             </ul>
             <div class="proj_intro">以國外傢俱網站Design With Reach為發想，利用FullPage.js實現單頁式滾動網頁。
             </div>
-             <div class="go-online_btn"><i class="fas fa-code-merge"></i> Github</div>
+             <div class="go-online_btn"><i class="fas fa-code-merge"></i> <a
+                 href="https://samarhsiao.github.io/Samar-uiuxcafe-dev/fp.js/fullPage" target="_blank">Github</a>
+             </div>
           </div>
         </div>
 
@@ -125,7 +132,8 @@
              <div class="proj_intro">
                串接台北市政府人口統計公開api，以chat.js圖表呈現，可選擇各行政區，叫出對應的男女人口居住比例。專案採前後端分離，前端使用React框架串接api，後端環境以Node.js建置。
              </div>
-             <div class="go-online_btn"><i class="fas fa-code-merge"></i> Github</div>
+             <div class="go-online_btn"><i class="fas fa-code-merge"></i> <a
+                 href="https://github.com/samarhsiao/population-api-demo" target="_blank">Github</a></div>
            </div>
          </div>
   </div>
@@ -213,10 +221,36 @@
     other.addEventListener('click', () => {
       carousel_item.style.left = '-200%';
     })
+    //這裡是處理skill section carousel
+
+
+
+    const hamburger = document.querySelector('.fa-hamburger')
+    const mobileNavbar = document.querySelector('.navbar-m')
+    const mobileLink = document.querySelector('.link-m')
+   
+    hamburger.addEventListener('touchstart',()=>{
+      mobileNavbar.style.opacity = '1';
+      
+    })
+    document.addEventListener('touchstart',(e)=>{
+      // console.log(e.target)
+      if(e.target != hamburger){
+        mobileNavbar.style.opacity = '0';
+      }else{
+        mobileNavbar.style.opacity = '1';
+      }
+     
+
+    
+    })
+
+
+
   </script>
 
   <script src="https://kit.fontawesome.com/b2d3d74aff.js" crossorigin="anonymous"></script>
-  <script src="vanilla-tilt.js"></script>
+  
 </body>
 
 </html>

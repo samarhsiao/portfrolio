@@ -62,7 +62,6 @@ h2 {
 }
 
 .go-online_btn {
-  color: #ffffff;
   border-radius: 5px;
   background-color: firebrick;
   padding: 8px;
@@ -70,6 +69,11 @@ h2 {
   text-align: center;
   cursor: pointer;
   font-size: 16px;
+}
+.go-online_btn a,
+.go-online_btn i{
+  color:white;
+  text-decoration: none;
 }
 
 @media screen and (max-width:960px) {

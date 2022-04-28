@@ -4,6 +4,7 @@
   font-family: 'Fira Sans',
   sans-serif;
 }
+
 .navbar_wrapper {
   width: 100%;
   position: Fixed;
@@ -19,11 +20,13 @@
   justify-content: space-between;
   background-color: rgb(255, 255, 255);
   padding: 8px;
-  
 
 }
 
-.nav-links {
+.navbar-m{
+  display:none;
+}
+.menu {
   display: flex;
   list-style-type: none;
   margin-right: 30px;
@@ -39,11 +42,11 @@
   font-weight:700;
 }
 
-.nav-links li {
+.menu li {
   margin-left: 20px
 }
 
-.nav-links li::after {
+.menu li::after {
   content: "";
   width: 10%;
   display: block;
@@ -115,61 +118,6 @@
   padding:100px 0;
 }
 
-.flipping-card {
-  width: 320px;
-  overflow: hidden;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  text-align: center;
-}
-
-
-
-.flipping-card h2 {
-  font-size: 28px;
-  font-weight: 600;
-  color: white;
-  margin: 35px auto 20px;
-}
-
-.flipping-card p {
-  font-size: 20px;
-  margin: 0px auto 20px;
-  color: white;
-}
-
-.social-icon {
-  display: flex;
-  justify-content: center;
-}
-
-.social-icon i {
-  color: white;
-  font-size: 24px;
-
-}
-
-.social-icon .icon {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  margin: auto 10px;
-  cursor: pointer;
-}
-
-.social-icon .icon:hover {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.icon a {
-  text-decoration: none;
-}
-
-
 .btn {
   width: 120px;
   padding: 18px 8px;
@@ -177,7 +125,12 @@
   margin: auto 10px;
   font-size: 16px;
   font-weight: 600;
+  cursor: pointer;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+   rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
+  
+
 .btn a{
   text-decoration: none;
 }
@@ -185,21 +138,57 @@
 .resume{
   background-color: #23222B;
 }
+.resume:hover{
+  box-shadow: inset rgba(159, 159, 159, 0.25) 0px 4px 7px -3px,
+  inset rgba(255, 255, 255, 0.3) 0px 3px 5px -3px;
+}
 .resume a{
   color:white;
 }
 
 .github {
-  background-color:white
+  background-color:white;
+ 
+  
 }
-
+.github:hover {
+  box-shadow: inset rgba(50, 50, 93, 0.25) 0px 4px 7px -3px,
+    inset rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+}
 .github a {
   color: #23222B;
 }
 @media screen and (max-width:414px){
-  .nav-links{
+  .menu{
     display:none;
   }
+  .navbar-m {
+    position:fixed;
+    /* 頁面滾動到下方也要出現在固定位置 */
+    top:38px;
+    z-index: 999;
+    opacity:0;
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    transition:.5s;
+  }
+  .menu-m{
+    list-style-type: none;
+    margin:10px;
+    text-align: right;
+
+  }
+  .menu-m li{
+    margin-bottom:12px;
+  }
+  .menu-m li a{
+     text-decoration: none;
+     color: #A5A5A5;
+     font-weight:700;
+  }
+  
   .hamburger-m{
     display:block;
     font-size:18px;
